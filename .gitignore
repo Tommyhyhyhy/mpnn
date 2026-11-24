@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Dữ liệu đã giải nén (notebook/app tự giải nén từ file zip)
+data/C50train/
+data/C50test/
+
+# Cấu hình cục bộ của công cụ
+.claude/
+.agents/
+.vscode/

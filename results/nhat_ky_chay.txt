@@ -1,0 +1,47 @@
+50 tác giả | 2500 bài train | 2500 bài test
+Độ dài bài: trung vị 504 từ, min 52, max 1495
+20 từ đặc trưng đầu tiên: ['the', 'to', 'of', 'a', 'in', 'and', 'said', 'for', 'on', 'that', 'is', 'it', 'with', 'be', 'at', 'by', 'its', 'as', 'was', 'from']
+Đã mô phỏng null cho 50 tác giả, B = 1000  (3s)
+Sai lầm loại I (α=5%): 0.077  CI95 (np.float64(0.06737380434399123), np.float64(0.08832358481992392))
+Power phát hiện bài sai tác giả: 0.839  CI95 (np.float64(0.8242812360057494), np.float64(0.8530779068409864))
+KS test p_true ~ U(0,1): D=0.056, p=2.24e-07
+AUC = 0.940 | Độ chính xác đoán đúng tác giả thật (argmin Delta): 0.538
+Mốc so sánh Delta cổ điển: {'type1': 0.0624, 'power': 0.2992, 'auc': 0.75737144, 'attribution_acc': 0.428}
+{'same_period': 0.03493333333333333, 'same_period_ci': (np.float64(0.029516254067304362), np.float64(0.041302290860110794)), 'other_period': 0.0624, 'other_period_ci': (np.float64(0.055097051805075556), np.float64(0.07059860887490625)), 'n': 3750}
+{'L': 50, 'type1': 0.066, 'power': 0.4392, 'type1_wrongnull': 0.4788, 'acc_attr': 0.2356, 'power_ci': (np.float64(0.41985343862436914), np.float64(0.4587331301106497)), 'type1_ci': (np.float64(0.056917919985929495), np.float64(0.07641383710285758))}
+{'L': 100, 'type1': 0.074, 'power': 0.59, 'type1_wrongnull': 0.3332, 'acc_attr': 0.318, 'power_ci': (np.float64(0.5705963502161123), np.float64(0.6091274789590239)), 'type1_ci': (np.float64(0.06437924965746128), np.float64(0.08492795891356014))}
+{'L': 200, 'type1': 0.0792, 'power': 0.7324, 'type1_wrongnull': 0.2188, 'acc_attr': 0.4328, 'power_ci': (np.float64(0.7146989377387709), np.float64(0.7493879278201367)), 'type1_ci': (np.float64(0.0692480793676909), np.float64(0.09044317266678287))}
+{'L': 300, 'type1': 0.0836, 'power': 0.8044, 'type1_wrongnull': 0.1388, 'acc_attr': 0.474, 'power_ci': (np.float64(0.7883887343069699), np.float64(0.8194771945920466)), 'type1_ci': (np.float64(0.07337834439733405), np.float64(0.09509940595236856))}
+{'L': 400, 'type1': 0.0892, 'power': 0.818, 'type1_wrongnull': 0.1168, 'acc_attr': 0.4996, 'power_ci': (np.float64(0.802390726947604), np.float64(0.8326334694712108)), 'type1_ci': (np.float64(0.07864781874933265), np.float64(0.10101274763793401))}
+{'n': 5, 'R': 20, 'type1': 0.08560000000000002, 'type1_sd': 0.014460108465779406, 'power': 0.5913999999999999, 'power_sd': 0.0374845933263535}
+{'n': 10, 'R': 20, 'type1': 0.056200000000000014, 'type1_sd': 0.012310030142337718, 'power': 0.6723999999999999, 'power_sd': 0.02121171473750443}
+{'n': 20, 'R': 20, 'type1': 0.06250000000000001, 'type1_sd': 0.010952048594717457, 'power': 0.7652000000000001, 'power_sd': 0.024282547338843143}
+{'n': 35, 'R': 20, 'type1': 0.07130000000000002, 'type1_sd': 0.013191304951208937, 'power': 0.8142999999999999, 'power_sd': 0.027293916808271413}
+{'n': 50, 'R': 20, 'type1': 0.0799, 'type1_sd': 0.011001913709130692, 'power': 0.835, 'power_sd': 0.01617665634568268}
+{'prop': 0.02, 'N': 500, 'R': 300, 'naive_precision': 0.184, 'naive_recall': 0.84, 'naive_f1': 0.301, 'naive_fdr': 0.816, 'naive_n_flag': 46.147, 'bh_precision': 0.36, 'bh_recall': 0.481, 'bh_f1': 0.408, 'bh_fdr': 0.513, 'bh_n_flag': 11.813, 'recover_true_author': 0.531}
+{'prop': 0.05, 'N': 500, 'R': 300, 'naive_precision': 0.369, 'naive_recall': 0.841, 'naive_f1': 0.512, 'naive_fdr': 0.631, 'naive_n_flag': 57.417, 'bh_precision': 0.641, 'bh_recall': 0.58, 'bh_f1': 0.603, 'bh_fdr': 0.356, 'bh_n_flag': 22.753, 'recover_true_author': 0.526}
+{'prop': 0.1, 'N': 500, 'R': 300, 'naive_precision': 0.55, 'naive_recall': 0.842, 'naive_f1': 0.665, 'naive_fdr': 0.45, 'naive_n_flag': 76.847, 'bh_precision': 0.767, 'bh_recall': 0.616, 'bh_f1': 0.68, 'bh_fdr': 0.233, 'bh_n_flag': 40.347, 'recover_true_author': 0.527}
+{'prop': 0.2, 'N': 500, 'R': 300, 'naive_precision': 0.733, 'naive_recall': 0.842, 'naive_f1': 0.784, 'naive_fdr': 0.267, 'naive_n_flag': 115.013, 'bh_precision': 0.863, 'bh_recall': 0.662, 'bh_f1': 0.748, 'bh_fdr': 0.137, 'bh_n_flag': 76.75, 'recover_true_author': 0.537}
+{'f': 0.0, 'reject': 0.0985, 'ci': (np.float64(0.08619959637936626), np.float64(0.11233984905384566)), 'R': 2000}
+{'f': 0.1, 'reject': 0.1045, 'ci': (np.float64(0.09184262150174188), np.float64(0.11867381852026385)), 'R': 2000}
+{'f': 0.2, 'reject': 0.1295, 'ci': (np.float64(0.11549225202985229), np.float64(0.1449283321121278)), 'R': 2000}
+{'f': 0.3, 'reject': 0.1725, 'ci': (np.float64(0.15657337750644248), np.float64(0.18968233452189345)), 'R': 2000}
+{'f': 0.5, 'reject': 0.3335, 'ci': (np.float64(0.31317375323575003), np.float64(0.35446464692522084)), 'R': 2000}
+{'f': 0.7, 'reject': 0.527, 'ci': (np.float64(0.5050876682823373), np.float64(0.548808807367235)), 'R': 2000}
+{'f': 1.0, 'reject': 0.767, 'ci': (np.float64(0.7479713260209147), np.float64(0.7850049331804114)), 'R': 2000}
+Điểm chuyển thật = 400, ước lượng = 390.0
+{'L': 500, 'n': 1000, 'pass_as_author': 1.0, 'pass_as_other': 0.187, 'sample': 'u s banks insurance companies to increase the rules on average spending less formal notice of government should go he said he said the bills introduced set a top priority is facing a top level the plan is spectacularly insecure editor mike elgan said this study said the percentage points according to derive as much as possible plans to make'}
+{'B': 50, 'mean': 0.0696078431372549, 'sd': 0.03291519001811724, 'sd_theory': 0.035989607197365804}
+{'B': 100, 'mean': 0.06212871287128714, 'sd': 0.021031575607873505, 'sd_theory': 0.024138917935202543}
+{'B': 200, 'mean': 0.054850746268656714, 'sd': 0.013162339133491331, 'sd_theory': 0.016100022034523456}
+{'B': 500, 'mean': 0.05334331337325349, 'sd': 0.009819971265131792, 'sd_theory': 0.010049657137595924}
+{'B': 1000, 'mean': 0.05207292707292708, 'sd': 0.006596384682559642, 'sd_theory': 0.007025762402685184}
+{'B': 2000, 'mean': 0.052736131934032995, 'sd': 0.006005524831442348, 'sd_theory': 0.004997751110383012}
+{'K': 25, 'auc_cos': 0.80223216, 'acc_cos': 0.1804, 'auc_classic': 0.64546352, 'acc_classic': 0.1648}
+{'K': 50, 'auc_cos': 0.8543168, 'acc_cos': 0.2572, 'auc_classic': 0.666156, 'acc_classic': 0.2252}
+{'K': 100, 'auc_cos': 0.91175872, 'acc_cos': 0.3884, 'auc_classic': 0.72994736, 'acc_classic': 0.354}
+{'K': 200, 'auc_cos': 0.93640704, 'acc_cos': 0.4996, 'auc_classic': 0.7488768, 'acc_classic': 0.4076}
+{'K': 300, 'auc_cos': 0.94723424, 'acc_cos': 0.5384, 'auc_classic': 0.75077184, 'acc_classic': 0.428}
+{'K': 500, 'auc_cos': 0.96004576, 'acc_cos': 0.582, 'auc_classic': 0.77427136, 'acc_classic': 0.4204}
+{'K': 1000, 'auc_cos': 0.96841408, 'acc_cos': 0.63, 'auc_classic': 0.80117296, 'acc_classic': 0.5444}
+Xong toàn bộ thí nghiệm trong 1.8 phút.

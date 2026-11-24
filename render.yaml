@@ -1,0 +1,11 @@
+# Cấu hình triển khai web demo lên Render (https://render.com)
+services:
+  - type: web
+    name: phat-hien-bai-bao-sai-tac-gia
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app_demo.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
