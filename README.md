@@ -120,55 +120,7 @@ Khi đó p = (1 + 0) / 1.001 ≈ 0,001, nên bác bỏ H0.
 
 ---
 
-## 7. Chín thí nghiệm: câu hỏi, cách làm, kết quả
 
-Thuật ngữ cần dùng:
-
-- **Power** (năng lực phát hiện) = tỷ lệ bài **ghi sai** bị phát hiện. Càng cao càng tốt.
-- **Sai lầm loại I** (báo động nhầm) = tỷ lệ bài **ghi đúng** nhưng bị nghi oan. Nên ≤ 5%.
-
-### TN1: Phương pháp có hoạt động không?
-- **Cách làm:** 2.500 bài kiểm tra, mỗi bài thử một lần ghi đúng tên và một lần ghi sai tên (tác giả sai chọn ngẫu nhiên).
-- **Kết quả:** phát hiện **83,9%** bài ghi sai. AUC = 0,94 (1 là hoàn hảo, 0,5 là đoán mò). Thước đo cũ (Delta cổ điển) chỉ phát hiện được 29,9%.
-- **Nhưng:** báo động nhầm là **7,7%**, cao hơn mức 5% mong muốn. TN1b giải thích lý do.
-
-### TN1b: Vì sao báo động nhầm vượt 5%?
-- **Cách làm:** so hai loại bài: bài **cùng giai đoạn** với bài mẫu, và bài **khác giai đoạn**.
-- **Kết quả:** cùng giai đoạn chỉ báo nhầm **3,5%** (đạt yêu cầu). Khác giai đoạn thì lên **6,2%**.
-- **Ý nghĩa:** thuật toán không sai. Văn phong và đề tài của nhà báo **thay đổi theo thời gian** nên bài mới hơi lệch khỏi hồ sơ cũ.
-
-### TN2: Bài cần dài bao nhiêu chữ?
-- **Cách làm:** cắt bài còn 50, 100, 200, 300, 400 từ.
-- **Kết quả:** cần khoảng **300 từ** để phát hiện được 80%. Nếu **không khớp độ dài** khi mô phỏng, bài 50 từ bị báo nhầm tới **48%**, tức cứ 2 bài đúng thì 1 bài bị nghi oan.
-- **Ý nghĩa:** đây là bằng chứng rõ nhất rằng **mô phỏng phải đúng điều kiện**.
-
-### TN3: Tác giả cần bao nhiêu bài mẫu?
-- **Cách làm:** cho mỗi tác giả 5, 10, 20, 35, 50 bài mẫu, lặp 20 lần.
-- **Kết quả:** 20 bài thì power đạt 77%. Từ 20 lên 50 bài chỉ tăng thêm 7%.
-- **Ý nghĩa:** nên có **ít nhất 20 bài mẫu** cho mỗi tác giả.
-
-### TN4: Quét cả kho 500 bài thì sao?
-- **Vấn đề:** kiểm tra 500 bài, mỗi bài có 5% khả năng báo nhầm, thì ước chừng có 25 bài bị nghi oan.
-- **Cách làm:** so hai cách. Cách 1 là đánh dấu mọi bài có p ≤ 0,05. Cách 2 là dùng **Benjamini–Hochberg (BH)**, một thủ tục chỉnh ngưỡng khi kiểm định nhiều bài cùng lúc.
-- **Kết quả:** khi kho có 5% bài sai, BH nâng **precision** (tỷ lệ cảnh báo đúng) từ **37% lên 64%**. Đổi lại, BH bỏ sót nhiều hơn.
-
-### TN5: Bài chỉ bị viết thay **một phần**?
-- **Cách làm:** thay một đoạn ngẫu nhiên trong bài của A bằng văn của B, với tỷ lệ 10%, 20%… đến 100%.
-- **Kết quả:** chèn dưới 30% thì gần như không phát hiện được. Ở 70% mới phát hiện được 53%.
-- **Bonus:** dùng "cửa sổ trượt" quét dọc bài để tìm **chỗ văn phong đổi**. Vị trí đoán được là từ thứ 390, vị trí thật là 400.
-
-### TN6: Dùng máy sinh văn bản giả có lừa được không?
-- **Cách làm:** dùng **chuỗi Markov** (mỗi từ tiếp theo chỉ phụ thuộc từ ngay trước) học từ bài của A, rồi sinh ra văn bản giả.
-- **Kết quả:** **100%** văn bản giả qua mặt kiểm định, dù đọc thì vô nghĩa.
-- **Ý nghĩa:** phương pháp chỉ nhìn tần suất từ, không kiểm tra câu có nghĩa hay không. Đây là **giới hạn** của phương pháp.
-
-### TN7: Lặp bootstrap bao nhiêu lần là đủ?
-- **Kết quả:** với 50 lần lặp, p-value dao động ±0,033, gần bằng chính ngưỡng 0,05, nên kết luận không ổn định. Với **1.000 lần** thì sai số còn ±0,007, đủ tin cậy. Kết quả thực nghiệm khớp với công thức lý thuyết √(p(1−p)/B).
-
-### TN8: Dùng bao nhiêu từ đặc trưng?
-- **Kết quả:** 300 từ cho AUC 0,947. Dùng nhiều từ hơn chỉ tăng chút ít và bắt đầu lẫn các từ chủ đề (tên công ty, ngành), vốn không phản ánh văn phong.
-
----
 
 ## 8. Kết luận cần nhớ
 
