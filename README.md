@@ -1,6 +1,6 @@
 
-**Đề tài:** Phát hiện bài báo bị ghi sai tác giả bằng NLP
-**Môn:** Mô phỏng ngẫu nhiên
+##**Đề tài:** Phát hiện bài báo bị ghi sai tác giả bằng NLP
+##**Môn:** Mô phỏng ngẫu nhiên
 
 
 ---
