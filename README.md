@@ -78,7 +78,7 @@ Trong thống kê, việc này gọi là **kiểm định giả thuyết**:
 
 ---
 
-## 5. Ý tưởng 3: Mô phỏng "mức bình thường" bằng bootstrap (TRỌNG TÂM MÔN HỌC)
+## 5. Ý tưởng 3: Mô phỏng "mức bình thường" bằng bootstrap 
 
 **Vấn đề:** phân phối null **không có công thức toán**. Nó phụ thuộc vào từng tác giả, độ dài bài và nhiều thứ khác. Không thể tra bảng như phân phối chuẩn.
 
