@@ -1,9 +1,7 @@
-# ĐỌC CÁI NÀY TRƯỚC: Hiểu đồ án trong 15 phút
 
 **Đề tài:** Phát hiện bài báo bị ghi sai tác giả bằng NLP
 **Môn:** Mô phỏng ngẫu nhiên
 
-File này giải thích đồ án bằng lời thường, không cần biết code. Đọc theo thứ tự từ trên xuống.
 
 ---
 
